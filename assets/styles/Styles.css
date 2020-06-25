@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    padding-top: 0;
+    margin: 0;
+    background-color: #4b4bff;
+}
+
+h1{
+    display: inline-block;
+}
+
+.image-movie {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+header {
+    text-align: center;
+    margin: auto;
+}
+
+.adding-movie,
+.searching-for-movie{
+    background-color: white;
+    border-radius: 8px;
+    height: 285px;
+    box-shadow: 0 3px 8px rgb(0, 0, 0);
+    width: 510px;
+    padding: 20px;
+}
+
+.adding-movie{
+    float: left;
+    margin-right: 100px;
+    margin-bottom: 250px;
+}
+
+.database-second-section {
+    margin: auto;
+    width: fit-content;
+}
+
+.database {
+    margin: auto;
+    padding: 20px;
+}
+
+.searching-for-movie{
+    margin-right: 0px;
+    display: inline-block;
+}
+
+.movie-name{
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.movie-title{
+    border:none;
+    border-bottom: 2px solid black;
+    outline: none;
+    width: 450px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.movie-title:focus{
+    border-color: #ff2151;
+}
+
+.movie-title:hover{
+    border-color: #ff2151;
+}
+
+.genre-section{
+    float:left;
+    margin-left: 50px;
+    margin-right: 80px;
+}
+
+.movie-genre,
+.movie-rating,
+.searching-movie-title{
+    padding-left: none;
+    font-size: 20px;
+    width: 135px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.searching-movie-title{
+    margin-bottom: 90px;
+}
+
+.movie-genre:focus,
+.movie-rating:focus,
+.searching-movie-title:focus{
+    border-color: #ff2151;
+}
+
+.search-title{
+    margin-top: 0px;
+}
+
+.movie-genre:hover,
+.movie-rating:hover,
+.searching-movie-title:hover{
+    border-color: #ff2151;
+}
+
+.submit-movie-information,
+.clear-movies,
+.clear-searched,
+.submit-movie-search{
+    border: none;
+    margin-top: 15px;
+    font: inherit;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background: #ff0062;
+    cursor: pointer;
+}
+
+.submit-movie-information:hover,
+.clear-movies:hover,
+.clear-searched:hover,
+.submit-movie-search:hover{
+    color: white;
+    background-color: #4b4bff;
+}
+
+.submit-movie-information:active,
+.clear-movies:active,
+.clear-searched:active,
+.submit-movie-search:active {
+    background-color: #4b4bff;
+}
+
+.submit-movie-information{
+    margin-right: 85px;
+    margin-left: 45px;
+}
+
+.submit-movie-search{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 65px;
+}
+
+button:focus{
+    outline: none;
+}
+
+.submit-movie-information{
+    margin-top: 30px;
+}
+
+.searching-movie-title{
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.list-of-movies{
+    float: left;
+    text-align: center;
+    margin-top: 45px;
+    padding-right: 40px;
+}
+
+.movie-list{
+    margin-right: 30px;
+}
+
+.search-movie-list-header{
+    padding-bottom: 3px;
+    text-align: center;
+    margin-top: 28px;
+}
+
+
+.searched-movies{
+    margin-left: 200px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.movie-list-header{
+    margin-top: 25px;
+    padding-bottom: 3px;
+}
+
+h2{
+    text-align: center;
+}
+
+li{
+    cursor: pointer;
+    padding: 5px;
+    max-height: fit-content;
+    word-wrap: break-word;
+    max-width: 470.66px;
+    list-style-type: none;
+    border: 3px solid black;
+    border-radius: 8px;
+    font-size: inherit;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+li:hover{
+    background-color: #ff0062;
+    border-color: black;
+    color: white;
+}
+
+.five-stars {
+    margin-top: 8px;
+    position: initial;
+}
+
+.searched-list li{
+    border-color: #ff0062;
+}
+
+.searched-list li:hover{
+    border: 3px solid black;
+}
+
+p {
+    margin-left: 25px;
+}
