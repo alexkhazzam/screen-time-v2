@@ -1,21 +1,54 @@
-import { HandleUserInputs } from "./Components/HandleUserInputs";
-import { AppendToList } from "./App/AppendToList.js";
-import { SearchList } from "./App/SearchList.js";
-import { RenderStorage } from "./Components/RenderStorage.js";
+import { HandleInputs } from "./Components/HandleInputs.js.js";
+import { ClearMovies } from "./App/ClearMovies.js.js";
+import { SearchMovie } from "./Components/SearchMovie.js.js";
+import { StorageHandler } from "./App/StorageHandler.js.js";
+
+export let listOfMovies = [];
 
 class App {
-    fetchClasses() {
-        alert("THIS DOESNT WORK")
-        const handleUserInput = new HandleUserInputs(); 
-        handleUserInput.fetchInputs();
-        const renderStorage = new RenderStorage();
-        renderStorage.fetchPreviousListItems();
-    }   
+  fetchHandleInputs() {
+    const handleInputs = new HandleInputs();
+    handleInputs.fetchUserInfo();
+  }
+  searchMovies() {
+    const searchMovie = new SearchMovie();
+    searchMovie.filterStorage();
+    searchMovie.filterMovieList();
+  }
+  clearMovies(boolean) {
+    const clearMovies = new ClearMovies();
+
+    if (boolean) {
+      clearMovies.verifyList(true);
+      return;
+    }
+    clearMovies.verifyList(false);
+  }
 }
 
-const submitMovieInfo = document.querySelector(".submit-movie-information");
-const app = new App();
-submitMovieInfo.addEventListener("click", () => {
-    alert("hi")
-    app.fetchClasses.bind(app);
-})
+const submitBtn = document.querySelector(".submit-movie-information");
+submitBtn.addEventListener("click", () => {
+  const app = new App();
+  app.fetchHandleInputs();
+});
+
+const searchMovieBtn = document.querySelector(".submit-movie-search");
+searchMovieBtn.addEventListener("click", () => {
+  const app = new App();
+  app.searchMovies();
+});
+
+const clearMoviesBtn = document.querySelector(".clear-movies");
+clearMoviesBtn.addEventListener("click", () => {
+  const app = new App();
+  app.clearMovies(true);
+});
+
+const clearSearchedMoviesBtn = document.querySelector(".clear-searched");
+clearSearchedMoviesBtn.addEventListener("click", () => {
+  const app = new App();
+  app.clearMovies(false);
+});
+
+const storageHandler = new StorageHandler();
+storageHandler.fetchPreviousListItems();
