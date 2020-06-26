@@ -1,7 +1,7 @@
-import { HandleInputs } from "./Components/HandleInputs.js.js";
-import { ClearMovies } from "./App/ClearMovies.js.js";
-import { SearchMovie } from "./Components/SearchMovie.js.js";
-import { StorageHandler } from "./App/StorageHandler.js.js";
+import { HandleInputs } from "./Components/HandleInputs.js";
+import { ClearMovies } from "./App/ClearMovies.js";
+import { SearchMovie } from "./Components/SearchMovie.js";
+import { StorageHandler } from "./App/StorageHandler.js";
 
 export let listOfMovies = [];
 
